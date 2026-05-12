@@ -277,63 +277,59 @@ h1.hero-h1 em {
 .text-link:hover { color: var(--mint); border-color: var(--mint); }
 
 /* ============================================================
-   Credibility strip / stats
+   Logo strip
    ============================================================ */
-.brands {
+.logo-strip {
+  padding: 56px 0 60px;
+  border-bottom: 1px solid var(--line);
+}
+
+.logo-strip-label {
+  font-family: var(--body);
+  font-size: 10.5px;
+  font-weight: 600;
+  letter-spacing: .26em;
+  text-transform: uppercase;
+  color: var(--mint);
+  margin-bottom: 28px;
+  text-align: center;
+}
+
+.logo-strip-row {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  gap: 10px 18px;
-  font-family: var(--body);
-  font-size: 12px;
-  color: var(--muted);
-  letter-spacing: .06em;
-  text-transform: uppercase;
-  padding: 28px 0;
-  border-bottom: 1px solid var(--line);
+  justify-content: center;
+  gap: 22px 42px;
+  filter: grayscale(1);
 }
 
-.brands .label {
-  color: var(--mint);
-  font-weight: 600;
-}
-
-.brands .pip {
-  width: 3px;
-  height: 3px;
-  background: var(--line);
-  border-radius: 50%;
-}
-
-.stats {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 0;
-  border-bottom: 1px solid var(--line);
-}
-
-.stat {
-  padding: 28px 22px;
-  border-right: 1px solid var(--line);
-}
-
-.stat:last-child { border-right: none; }
-
-.stat .num {
+.brand-logo {
   font-family: var(--display);
-  font-weight: 600;
-  font-size: 30px;
-  color: var(--mint);
+  color: rgba(251,252,253,0.32);
+  font-size: 20px;
   letter-spacing: -0.01em;
+  font-weight: 600;
+  transition: color .25s ease, opacity .25s ease;
+  user-select: none;
+  white-space: nowrap;
+  line-height: 1;
 }
 
-.stat .label {
-  margin-top: 8px;
-  font-size: 12px;
-  color: var(--muted);
-  letter-spacing: .04em;
-  line-height: 1.45;
-}
+.brand-logo:hover { color: rgba(251,252,253,0.72); }
+
+/* Brand-specific typographic flair (still uniform grey) */
+.logo-disney { font-style: italic; font-weight: 700; font-size: 22px; letter-spacing: -0.015em; }
+.logo-espn { font-weight: 800; letter-spacing: -0.025em; }
+.logo-afl { font-weight: 800; letter-spacing: 0.04em; }
+.logo-optus { text-transform: lowercase; font-weight: 600; letter-spacing: -0.005em; }
+.logo-ten { font-weight: 800; letter-spacing: -0.01em; }
+.logo-sbs { font-weight: 800; letter-spacing: 0.04em; }
+.logo-abc { font-weight: 700; font-style: italic; letter-spacing: 0.02em; }
+.logo-ninemsn { text-transform: lowercase; font-weight: 500; letter-spacing: -0.015em; font-size: 21px; }
+.logo-jamtv { font-weight: 700; letter-spacing: -0.005em; }
+.logo-norg { font-weight: 600; letter-spacing: -0.01em; }
+.logo-tld { color: inherit; opacity: 0.7; font-weight: 500; }
 
 /* ============================================================
    Section heading
@@ -1109,10 +1105,11 @@ footer {
   .topbar-inner { padding: 14px 0; }
   .nav { display: none; }
   .hero { padding: 64px 0 48px; }
-  .stats { grid-template-columns: repeat(2, 1fr); }
-  .stat:nth-child(2) { border-right: none; }
-  .stat { border-bottom: 1px solid var(--line); }
-  .stat:nth-child(3), .stat:nth-child(4) { border-bottom: none; }
+  .logo-strip { padding: 36px 0 40px; }
+  .logo-strip-row { gap: 16px 24px; }
+  .brand-logo { font-size: 14px; }
+  .logo-disney { font-size: 16px; }
+  .logo-ninemsn { font-size: 15px; }
   .tiles, .services-grid, .approach-steps, .insights, .modes, .evidence {
     grid-template-columns: 1fr;
   }
